@@ -7,6 +7,13 @@ body {
   overflow-x: hidden;
   position: relative;
   font-family: 'Vazirmatn', 'Sahel', 'Shabnam', sans-serif;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* حالت شب/روز */
+body.light {
+  background: #fdfdfd;
+  color: #222;
 }
 
 /* پس‌زمینه متحرک */
@@ -50,6 +57,17 @@ header {
   font-family: 'Sahel', sans-serif;
 }
 
+#toggle-theme {
+  margin-top: 1rem;
+  background: gold;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 /* منو */
 nav {
   display: flex;
@@ -65,7 +83,6 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   position: relative;
-  font-family: 'Vazirmatn', sans-serif;
 }
 
 nav a::after {
@@ -94,7 +111,6 @@ nav a:hover::after {
   font-size: 2.5rem;
   color: #ffcc00;
   text-shadow: 2px 2px 5px #000;
-  font-family: 'Sahel', sans-serif;
 }
 
 /* محتوای اصلی */
@@ -121,7 +137,6 @@ nav a:hover::after {
 .article h3 {
   color: #ffcc00;
   margin-bottom: 1rem;
-  font-family: 'Shabnam', sans-serif;
 }
 
 /* دکمه‌ها */
@@ -135,12 +150,36 @@ nav a:hover::after {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: transform 0.3s, box-shadow 0.3s;
-  font-family: 'Vazirmatn', sans-serif;
 }
 
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* فرم پیشنهاد مقاله */
+.form-section {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.form-section h3 {
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.form-section input,
+.form-section textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Sahel', sans-serif;
 }
 
 /* فوتر */
@@ -150,5 +189,4 @@ footer {
   background: rgba(0,0,0,0.8);
   font-size: 0.9rem;
   color: #aaa;
-  font-family: 'Sahel', sans-serif;
 }
