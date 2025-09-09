@@ -37,6 +37,12 @@ body.light {
   100% {background-position: 0% 50%;}
 }
 
+/* لوگو */
+.logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
 /* هدر */
 header {
   text-align: center;
@@ -157,7 +163,7 @@ nav a:hover::after {
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-/* فرم پیشنهاد مقاله */
+/* فرم‌ها */
 .form-section {
   background: rgba(0,0,0,0.6);
   padding: 2rem;
@@ -180,6 +186,45 @@ nav a:hover::after {
   border-radius: 10px;
   border: none;
   font-family: 'Sahel', sans-serif;
+}
+
+/* بخش نظردهی */
+.comment-section {
+  background: rgba(0,0,0,0.6);
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.comment-section h3 {
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.comment-section input,
+.comment-section textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Sahel', sans-serif;
+}
+
+/* پنل مدیریت */
+body.admin header {
+  background: rgba(0,0,0,0.8);
+}
+
+body.admin .title {
+  color: #00ff99;
+}
+
+body.admin .form-section {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid #00ff99;
 }
 
 /* فوتر */
