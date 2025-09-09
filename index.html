@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
@@ -12,6 +12,7 @@
   <div class="background-overlay"></div>
 
   <header>
+    <img src="assets/logo.png" alt="لوگو" class="logo">
     <h1 class="title">دیدبان جهانی ایران</h1>
     <p class="subtitle">تحلیل‌های جهانی درباره ایران، ترجمه‌شده و تفسیرشده برای مردم ایران</p>
     <button id="toggle-theme">🌓 تغییر حالت شب/روز</button>
@@ -21,8 +22,7 @@
     <a href="#">📰 مقالات اخیر</a>
     <a href="#">📊 تحلیل‌ها</a>
     <a href="#">🌍 منابع جهانی</a>
-    <a href="#">🔍 جستجو</a>
-    <a href="#">👥 درباره ما</a>
+    <a href="admin.html">⚙️ پنل مدیریت</a>
   </nav>
 
   <section class="hero">
@@ -49,6 +49,16 @@
       <input type="text" placeholder="عنوان مقاله پیشنهادی" required>
       <textarea placeholder="توضیح مختصر..." required></textarea>
       <button class="btn">ارسال پیشنهاد</button>
+    </form>
+  </section>
+
+  <section class="comment-section">
+    <h3>💬 نظر دادن</h3>
+    <form>
+      <input type="text" placeholder="نام شما" required>
+      <input type="email" placeholder="ایمیل" required>
+      <textarea placeholder="متن نظر..." required></textarea>
+      <button class="btn">ارسال نظر</button>
     </form>
   </section>
 
