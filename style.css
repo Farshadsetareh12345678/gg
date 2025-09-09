@@ -1,15 +1,15 @@
 /* فونت و پایه */
 body {
   margin: 0;
-  font-family: 'Vazirmatn', sans-serif;
   direction: rtl;
   background: #000;
   color: #fff;
   overflow-x: hidden;
   position: relative;
+  font-family: 'Vazirmatn', 'Sahel', 'Shabnam', sans-serif;
 }
 
-/* پس‌زمینه با تصویر و افکت موج */
+/* پس‌زمینه متحرک */
 .background-overlay {
   position: fixed;
   top: 0;
@@ -19,8 +19,8 @@ body {
   background: url('assets/bg.jpg') no-repeat center center;
   background-size: cover;
   z-index: -1;
-  animation: wave 20s infinite linear;
-  opacity: 0.3;
+  animation: wave 30s infinite linear;
+  opacity: 0.25;
   filter: blur(2px);
 }
 
@@ -37,15 +37,17 @@ header {
   background: rgba(0,0,0,0.6);
 }
 
-header h1 {
-  font-size: 3rem;
+.title {
+  font-size: 3.2rem;
   color: gold;
   text-shadow: 2px 2px 5px #000;
+  font-family: 'Shabnam', sans-serif;
 }
 
-header p {
+.subtitle {
   font-size: 1.2rem;
   color: #ccc;
+  font-family: 'Sahel', sans-serif;
 }
 
 /* منو */
@@ -55,6 +57,7 @@ nav {
   gap: 2rem;
   background: rgba(0,0,0,0.8);
   padding: 1rem;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -62,6 +65,7 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   position: relative;
+  font-family: 'Vazirmatn', sans-serif;
 }
 
 nav a::after {
@@ -90,6 +94,7 @@ nav a:hover::after {
   font-size: 2.5rem;
   color: #ffcc00;
   text-shadow: 2px 2px 5px #000;
+  font-family: 'Sahel', sans-serif;
 }
 
 /* محتوای اصلی */
@@ -106,6 +111,7 @@ nav a:hover::after {
   margin-bottom: 2rem;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
   transition: transform 0.3s;
+  border: 1px solid gold;
 }
 
 .article:hover {
@@ -115,6 +121,7 @@ nav a:hover::after {
 .article h3 {
   color: #ffcc00;
   margin-bottom: 1rem;
+  font-family: 'Shabnam', sans-serif;
 }
 
 /* دکمه‌ها */
@@ -128,6 +135,7 @@ nav a:hover::after {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   transition: transform 0.3s, box-shadow 0.3s;
+  font-family: 'Vazirmatn', sans-serif;
 }
 
 .btn:hover {
@@ -142,4 +150,5 @@ footer {
   background: rgba(0,0,0,0.8);
   font-size: 0.9rem;
   color: #aaa;
+  font-family: 'Sahel', sans-serif;
 }
