@@ -235,3 +235,25 @@ footer {
   font-size: 0.9rem;
   color: #aaa;
 }
+
+/* افکت ورود */
+.article,
+.form-section,
+.comment-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* افکت کلیک دکمه */
+.btn.clicked {
+  transform: scale(0.95);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+}
