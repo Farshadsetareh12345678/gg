@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>پنل مدیریت | دیدبان جهانی ایران</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="admin">
+
+  <div class="background-overlay"></div>
+
+  <header>
+    <img src="assets/logo.png" alt="لوگو" class="logo">
+    <h1 class="title">پنل مدیریت</h1>
+    <p class="subtitle">افزودن مقاله، ویدیو، و تفسیر</p>
+  </header>
+
+  <main class="content">
+    <section class="form-section">
+      <h3>📝 افزودن مقاله</h3>
+      <form>
+        <input type="text" placeholder="عنوان مقاله" required>
+        <textarea placeholder="متن مقاله..." required></textarea>
+        <input type="text" placeholder="منبع مقاله">
+        <input type="file" accept="image/*">
+        <button class="btn">افزودن مقاله</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h3>🎥 افزودن ویدیو</h3>
+      <form>
+        <input type="text" placeholder="عنوان ویدیو" required>
+        <textarea placeholder="توضیح ویدیو..." required></textarea>
+        <input type="url" placeholder="لینک ویدیو">
+        <button class="btn">ارسال ویدیو</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h3>📚 افزودن تفسیر مقاله</h3>
+      <form>
+        <input type="text" placeholder="عنوان مقاله موردنظر" required>
+        <textarea placeholder="تفسیر شما..." required></textarea>
+        <button class="btn">افزودن تفسیر</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © ۲۰۲۵ پنل مدیریت دیدبان جهانی ایران
+  </footer>
+
+</body>
+</html>
