@@ -4,23 +4,25 @@
   <meta charset="UTF-8">
   <title>دیدبان جهانی ایران</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&family=Sahel&family=Shabnam&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="background-overlay"></div>
 
   <header>
-    <h1>دیدبان جهانی ایران</h1>
-    <p>تحلیل‌های جهانی درباره ایران، ترجمه‌شده و تفسیرشده برای مردم ایران</p>
+    <h1 class="title">دیدبان جهانی ایران</h1>
+    <p class="subtitle">تحلیل‌های جهانی درباره ایران، ترجمه‌شده و تفسیرشده برای مردم ایران</p>
+    <button id="toggle-theme">🌓 تغییر حالت شب/روز</button>
   </header>
 
   <nav>
-    <a href="#">مقالات اخیر</a>
-    <a href="#">تحلیل‌ها</a>
-    <a href="#">منابع جهانی</a>
-    <a href="#">جستجو</a>
-    <a href="#">درباره ما</a>
+    <a href="#">📰 مقالات اخیر</a>
+    <a href="#">📊 تحلیل‌ها</a>
+    <a href="#">🌍 منابع جهانی</a>
+    <a href="#">🔍 جستجو</a>
+    <a href="#">👥 درباره ما</a>
   </nav>
 
   <section class="hero">
@@ -40,6 +42,15 @@
       <button class="btn">مطالعه کامل</button>
     </div>
   </main>
+
+  <section class="form-section">
+    <h3>📩 پیشنهاد مقاله جدید</h3>
+    <form>
+      <input type="text" placeholder="عنوان مقاله پیشنهادی" required>
+      <textarea placeholder="توضیح مختصر..." required></textarea>
+      <button class="btn">ارسال پیشنهاد</button>
+    </form>
+  </section>
 
   <footer>
     © ۲۰۲۵ دیدبان جهانی ایران — ساخته‌شده با عشق به وطن
