@@ -11,3 +11,18 @@ if(toggleBtn){
 particlesJS.load('particles-js', 'particles.json', function() {
   console.log('Particles loaded');
 });
+
+// انیمیشن اسکرول
+AOS.init({ duration: 1000 });
+
+// تایپ متن خوش‌آمدگویی
+const text = "به سایت قوام خوش آمدید";
+let i = 0;
+function typeWriter() {
+  if (i < text.length) {
+    document.getElementById("typed-text").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 100);
+  }
+}
+typeWriter();
