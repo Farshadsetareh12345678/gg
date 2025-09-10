@@ -1,70 +1,63 @@
-  <!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>دیدبان جهانی ایران</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>به سایت قوام خوش آمدید</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&family=Sahel&family=Shabnam&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <div class="background-overlay"></div>
-
-  <header>
-    <img src="assets/logo.png" alt="لوگو" class="logo">
-    <h1 class="title">دیدبان جهانی ایران</h1>
-    <p class="subtitle">تحلیل‌های جهانی درباره ایران، ترجمه‌شده و تفسیرشده برای مردم ایران</p>
-    <button id="toggle-theme">🌓 تغییر حالت شب/روز</button>
+  <div id="particles-js"></div>
+  <header class="header">
+    <div class="logo">قوام</div>
+    <nav>
+      <a href="#">خانه</a>
+      <a href="#">مقالات</a>
+      <a href="#">ویدیوها</a>
+      <a href="admin.html" class="btn">مدیریت</a>
+      <button id="theme-toggle">🌙</button>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#">📰 مقالات اخیر</a>
-    <a href="#">📊 تحلیل‌ها</a>
-    <a href="#">🌍 منابع جهانی</a>
-    <a href="admin.html">⚙️ پنل مدیریت</a>
-  </nav>
+  <main>
+    <section class="hero">
+      <h1>به سایت قوام خوش آمدید</h1>
+      <p>منبعی برای تحلیل‌ها، مقالات و ویدیوهای پژوهشی در حوزه سیاست</p>
+    </section>
 
-  <section class="hero">
-    <h2>🇮🇷 ایران، قلب تپنده خاورمیانه</h2>
-  </section>
+    <section>
+      <h2>آخرین مقالات</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>تحلیل روابط بین‌الملل</h3>
+          <p>بررسی تحولات جهانی و تاثیر آن بر سیاست داخلی.</p>
+        </div>
+        <div class="card">
+          <h3>چالش‌های سیاست داخلی</h3>
+          <p>نگاهی به مسائل مهم کشور و راهکارهای پیشنهادی.</p>
+        </div>
+        <div class="card">
+          <h3>تحولات منطقه</h3>
+          <p>بررسی رویدادهای مهم منطقه‌ای و تاثیرات آن.</p>
+        </div>
+      </div>
+    </section>
 
-  <main class="content">
-    <div class="article">
-      <h3>چرا ایران در سیاست جهانی نقش کلیدی دارد؟</h3>
-      <p>در این مقاله از اندیشکده JINSA، نویسنده به بررسی نقش ایران در معادلات امنیتی منطقه‌ای پرداخته و تأثیر تحریم‌ها بر رفتار دیپلماتیک تهران را تحلیل می‌کند...</p>
-      <button class="btn">مطالعه کامل</button>
-    </div>
-
-    <div class="article">
-      <h3>تحلیل مقاله فارن افرز درباره روابط ایران و چین</h3>
-      <p>نویسنده معتقد است که اتحاد استراتژیک ایران و چین می‌تواند نظم جهانی را به چالش بکشد. این مقاله به بررسی ابعاد اقتصادی و نظامی این همکاری پرداخته است...</p>
-      <button class="btn">مطالعه کامل</button>
-    </div>
+    <section>
+      <h2>آخرین ویدیوها</h2>
+      <div class="cards">
+        <div class="card video">🎥 گفتگوی ویژه</div>
+        <div class="card video">🎥 تحلیل اقتصادی</div>
+        <div class="card video">🎥 بررسی سیاست خارجی</div>
+      </div>
+    </section>
   </main>
 
-  <section class="form-section">
-    <h3>📩 پیشنهاد مقاله جدید</h3>
-    <form>
-      <input type="text" placeholder="عنوان مقاله پیشنهادی" required>
-      <textarea placeholder="توضیح مختصر..." required></textarea>
-      <button class="btn">ارسال پیشنهاد</button>
-    </form>
-  </section>
-
-  <section class="comment-section">
-    <h3>💬 نظر دادن</h3>
-    <form>
-      <input type="text" placeholder="نام شما" required>
-      <input type="email" placeholder="ایمیل" required>
-      <textarea placeholder="متن نظر..." required></textarea>
-      <button class="btn">ارسال نظر</button>
-    </form>
-  </section>
-
   <footer>
-    © ۲۰۲۵ دیدبان جهانی ایران — ساخته‌شده با عشق به وطن
+    <p>© 2025 قوام - همه حقوق محفوظ است</p>
   </footer>
 
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
