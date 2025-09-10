@@ -1,56 +1,22 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>پنل مدیریت | دیدبان جهانی ایران</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ورود مدیر</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
-<body class="admin">
-
-  <div class="background-overlay"></div>
-
-  <header>
-    <img src="assets/logo.png" alt="لوگو" class="logo">
-    <h1 class="title">پنل مدیریت</h1>
-    <p class="subtitle">افزودن مقاله، ویدیو، و تفسیر</p>
-  </header>
-
-  <main class="content">
-    <section class="form-section">
-      <h3>📝 افزودن مقاله</h3>
-      <form>
-        <input type="text" placeholder="عنوان مقاله" required>
-        <textarea placeholder="متن مقاله..." required></textarea>
-        <input type="text" placeholder="منبع مقاله">
-        <input type="file" accept="image/*">
-        <button class="btn">افزودن مقاله</button>
-      </form>
-    </section>
-
-    <section class="form-section">
-      <h3>🎥 افزودن ویدیو</h3>
-      <form>
-        <input type="text" placeholder="عنوان ویدیو" required>
-        <textarea placeholder="توضیح ویدیو..." required></textarea>
-        <input type="url" placeholder="لینک ویدیو">
-        <button class="btn">ارسال ویدیو</button>
-      </form>
-    </section>
-
-    <section class="form-section">
-      <h3>📚 افزودن تفسیر مقاله</h3>
-      <form>
-        <input type="text" placeholder="عنوان مقاله موردنظر" required>
-        <textarea placeholder="تفسیر شما..." required></textarea>
-        <button class="btn">افزودن تفسیر</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    © ۲۰۲۵ پنل مدیریت دیدبان جهانی ایران
-  </footer>
-
+<body class="admin-body">
+  <div id="particles-js"></div>
+  <div class="login-box">
+    <h2>ورود مدیر</h2>
+    <form>
+      <input type="text" placeholder="نام کاربری" required>
+      <input type="password" placeholder="رمز عبور" required>
+      <button type="submit">ورود</button>
+    </form>
+  </div>
+  <script src="particles.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
