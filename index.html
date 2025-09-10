@@ -1,65 +1,56 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>به سایت قوام خوش آمدید</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="aos.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>به سایت قوام خوش آمدید</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="particles-js"></div>
-  <header class="header">
-    <div class="logo" data-aos="fade-down">قوام</div>
-    <nav>
-      <a href="#">خانه</a>
-      <a href="#">مقالات</a>
-      <a href="#">ویدیوها</a>
-      <a href="admin.html" class="btn">مدیریت</a>
-      <button id="theme-toggle">🌙</button>
-    </nav>
-  </header>
+<div id="particles-js"></div>
 
-  <main>
-    <section class="hero" data-aos="zoom-in">
-      <h1 id="typed-text"></h1>
-      <p>منبعی برای تحلیل‌ها، مقالات و ویدیوهای پژوهشی در حوزه سیاست</p>
-    </section>
+<header class="header">
+  <div class="logo">قوام</div>
+  <nav>
+    <a href="#">خانه</a>
+    <a href="#">مقالات</a>
+    <a href="#">ویدیوها</a>
+    <a href="admin.html" class="btn">مدیریت</a>
+    <button id="theme-toggle">🌙</button>
+  </nav>
+</header>
 
-    <section data-aos="fade-up">
-      <h2>آخرین مقالات</h2>
-      <div class="cards">
-        <div class="card" data-aos="flip-left">
-          <h3>تحلیل روابط بین‌الملل</h3>
-          <p>بررسی تحولات جهانی و تاثیر آن بر سیاست داخلی.</p>
-        </div>
-        <div class="card" data-aos="flip-left">
-          <h3>چالش‌های سیاست داخلی</h3>
-          <p>نگاهی به مسائل مهم کشور و راهکارهای پیشنهادی.</p>
-        </div>
-        <div class="card" data-aos="flip-left">
-          <h3>تحولات منطقه</h3>
-          <p>بررسی رویدادهای مهم منطقه‌ای و تاثیرات آن.</p>
-        </div>
-      </div>
-    </section>
+<main>
+  <section class="hero">
+    <h1 id="typed-text"></h1>
+    <p>منبعی برای تحلیل‌ها، مقالات و ویدیوهای پژوهشی در حوزه سیاست</p>
+  </section>
 
-    <section data-aos="fade-up">
-      <h2>آخرین ویدیوها</h2>
-      <div class="cards">
-        <div class="card video" data-aos="zoom-in">🎥 گفتگوی ویژه</div>
-        <div class="card video" data-aos="zoom-in">🎥 تحلیل اقتصادی</div>
-        <div class="card video" data-aos="zoom-in">🎥 بررسی سیاست خارجی</div>
-      </div>
-    </section>
-  </main>
+  <section class="cards-section">
+    <h2>آخرین مقالات</h2>
+    <div class="cards">
+      <div class="card glass">تحلیل روابط بین‌الملل</div>
+      <div class="card glass">چالش‌های سیاست داخلی</div>
+      <div class="card glass">تحولات منطقه</div>
+    </div>
+  </section>
 
-  <footer data-aos="fade-up">
-    <p>© 2025 قوام - همه حقوق محفوظ است</p>
-  </footer>
+  <section class="cards-section">
+    <h2>آخرین ویدیوها</h2>
+    <div class="cards">
+      <div class="card glass">🎥 گفتگوی ویژه</div>
+      <div class="card glass">🎥 تحلیل اقتصادی</div>
+      <div class="card glass">🎥 بررسی سیاست خارجی</div>
+    </div>
+  </section>
+</main>
 
-  <script src="particles.min.js"></script>
-  <script src="aos.js"></script>
-  <script src="script.js"></script>
+<footer>
+  <p>© 2025 قوام - همه حقوق محفوظ است</p>
+</footer>
+
+<script src="particles.min.js"></script>
+<script src="gsap.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
