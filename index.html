@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>به سایت قوام خوش آمدید</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="aos.css">
 </head>
 <body>
   <div id="particles-js"></div>
   <header class="header">
-    <div class="logo">قوام</div>
+    <div class="logo" data-aos="fade-down">قوام</div>
     <nav>
       <a href="#">خانه</a>
       <a href="#">مقالات</a>
@@ -20,44 +21,45 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>به سایت قوام خوش آمدید</h1>
+    <section class="hero" data-aos="zoom-in">
+      <h1 id="typed-text"></h1>
       <p>منبعی برای تحلیل‌ها، مقالات و ویدیوهای پژوهشی در حوزه سیاست</p>
     </section>
 
-    <section>
+    <section data-aos="fade-up">
       <h2>آخرین مقالات</h2>
       <div class="cards">
-        <div class="card">
+        <div class="card" data-aos="flip-left">
           <h3>تحلیل روابط بین‌الملل</h3>
           <p>بررسی تحولات جهانی و تاثیر آن بر سیاست داخلی.</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="flip-left">
           <h3>چالش‌های سیاست داخلی</h3>
           <p>نگاهی به مسائل مهم کشور و راهکارهای پیشنهادی.</p>
         </div>
-        <div class="card">
+        <div class="card" data-aos="flip-left">
           <h3>تحولات منطقه</h3>
           <p>بررسی رویدادهای مهم منطقه‌ای و تاثیرات آن.</p>
         </div>
       </div>
     </section>
 
-    <section>
+    <section data-aos="fade-up">
       <h2>آخرین ویدیوها</h2>
       <div class="cards">
-        <div class="card video">🎥 گفتگوی ویژه</div>
-        <div class="card video">🎥 تحلیل اقتصادی</div>
-        <div class="card video">🎥 بررسی سیاست خارجی</div>
+        <div class="card video" data-aos="zoom-in">🎥 گفتگوی ویژه</div>
+        <div class="card video" data-aos="zoom-in">🎥 تحلیل اقتصادی</div>
+        <div class="card video" data-aos="zoom-in">🎥 بررسی سیاست خارجی</div>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer data-aos="fade-up">
     <p>© 2025 قوام - همه حقوق محفوظ است</p>
   </footer>
 
   <script src="particles.min.js"></script>
+  <script src="aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
