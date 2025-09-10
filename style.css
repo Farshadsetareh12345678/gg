@@ -1,259 +1,68 @@
-/* فونت و پایه */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+
+* {margin:0; padding:0; box-sizing:border-box;}
 body {
-  margin: 0;
-  direction: rtl;
-  background: #000;
-  color: #fff;
-  overflow-x: hidden;
-  position: relative;
-  font-family: 'Vazirmatn', 'Sahel', 'Shabnam', sans-serif;
+  font-family: 'Vazirmatn', sans-serif;
+  background: var(--bg);
+  color: var(--text);
   transition: background 0.5s, color 0.5s;
 }
-
-/* حالت شب/روز */
-body.light {
-  background: #fdfdfd;
-  color: #222;
+:root {
+  --bg: #f5f5f5;
+  --text: #222;
+  --card-bg: #fff;
 }
-
-/* پس‌زمینه متحرک */
-.background-overlay {
+body.dark {
+  --bg: #121212;
+  --text: #eee;
+  --card-bg: #1e1e1e;
+}
+#particles-js {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: url('assets/bg.jpg') no-repeat center center;
-  background-size: cover;
   z-index: -1;
-  animation: wave 30s infinite linear;
-  opacity: 0.25;
-  filter: blur(2px);
 }
-
-@keyframes wave {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
+.header {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+  backdrop-filter: blur(10px);
+  position:sticky; top:0;
 }
-
-/* لوگو */
-.logo {
-  width: 80px;
-  margin-bottom: 1rem;
+.header nav a, .header nav button {
+  margin:0 0.5rem;
+  text-decoration:none;
+  color:var(--text);
 }
-
-/* هدر */
-header {
-  text-align: center;
-  padding: 2rem;
-  background: rgba(0,0,0,0.6);
-}
-
-.title {
-  font-size: 3.2rem;
-  color: gold;
-  text-shadow: 2px 2px 5px #000;
-  font-family: 'Shabnam', sans-serif;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #ccc;
-  font-family: 'Sahel', sans-serif;
-}
-
-#toggle-theme {
-  margin-top: 1rem;
-  background: gold;
-  color: black;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* منو */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  background: rgba(0,0,0,0.8);
-  padding: 1rem;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: gold;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0%;
-  height: 2px;
-  background: gold;
-  transition: width 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* بخش قهرمان */
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: rgba(0,0,0,0.5);
-}
-
-.hero h2 {
-  font-size: 2.5rem;
-  color: #ffcc00;
-  text-shadow: 2px 2px 5px #000;
-}
-
-/* محتوای اصلی */
-.content {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.article {
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s;
-  border: 1px solid gold;
-}
-
-.article:hover {
-  transform: translateY(-5px);
-}
-
-.article h3 {
-  color: #ffcc00;
-  margin-bottom: 1rem;
-}
-
-/* دکمه‌ها */
 .btn {
-  background: linear-gradient(to left, #009900, #da0000);
-  color: white;
-  padding: 0.7rem 2rem;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background:#007bff; color:#fff; padding:0.5rem 1rem; border-radius:5px;
 }
-
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+.hero {
+  text-align:center; padding:4rem 1rem;
 }
-
-/* فرم‌ها */
-.form-section {
-  background: rgba(0,0,0,0.6);
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+.cards {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:1rem; padding:1rem;
 }
-
-.form-section h3 {
-  color: gold;
-  margin-bottom: 1rem;
+.card {
+  background:var(--card-bg);
+  padding:1rem;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+  transition:transform 0.3s;
 }
-
-.form-section input,
-.form-section textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  border: none;
-  font-family: 'Sahel', sans-serif;
-}
-
-/* بخش نظردهی */
-.comment-section {
-  background: rgba(0,0,0,0.6);
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
-  border-radius: 10px;
-  margin-bottom: 2rem;
-}
-
-.comment-section h3 {
-  color: gold;
-  margin-bottom: 1rem;
-}
-
-.comment-section input,
-.comment-section textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  border: none;
-  font-family: 'Sahel', sans-serif;
-}
-
-/* پنل مدیریت */
-body.admin header {
-  background: rgba(0,0,0,0.8);
-}
-
-body.admin .title {
-  color: #00ff99;
-}
-
-body.admin .form-section {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid #00ff99;
-}
-
-/* فوتر */
+.card:hover {transform:translateY(-5px);}
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: rgba(0,0,0,0.8);
-  font-size: 0.9rem;
-  color: #aaa;
+  text-align:center; padding:1rem; margin-top:2rem;
 }
-
-/* افکت ورود */
-.article,
-.form-section,
-.comment-section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease-out;
+.admin-body {
+  display:flex; justify-content:center; align-items:center; height:100vh;
 }
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+.login-box {
+  background:var(--card-bg);
+  padding:2rem; border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
 }
-
-/* افکت کلیک دکمه */
-.btn.clicked {
-  transform: scale(0.95);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
-}
-
+.login-box input, .login-box button {
+  width:100%; padding:0.5rem; margin:0.5rem 0;
 }
