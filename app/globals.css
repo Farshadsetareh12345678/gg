@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* فونت فارسی */
+@import '@fontsource-variable/vazirmatn';
+
+/* متغیرهای رنگی تم */
+:root {
+  --bg: #0b1220;          /* پس‌زمینه تیره */
+  --bg-2: #0f172a;
+  --fg: #e5e7eb;          /* متن اصلی */
+  --muted: #94a3b8;       /* متن ثانویه */
+  --glass: rgba(255,255,255,0.06);
+  --ring: #22d3ee;        /* رنگ فوکوس */
+}
+
+.light {
+  --bg: #f8fafc;          /* پس‌زمینه روشن */
+  --bg-2: #eef2ff;
+  --fg: #0b1220;
+  --muted: #475569;
+  --glass: rgba(255,255,255,0.45);
+  --ring: #0ea5e9;
+}
+
+html {
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn Variable', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial;
+  background: radial-gradient(1200px 800px at 20% 10%, #0e1b31, var(--bg)) no-repeat;
+  color: var(--fg);
+}
+
+/* فوکوس رینگ */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* افکت هولوگرافیک لوگو */
+.holo {
+  background: conic-gradient(from 0deg, #8ec5ff, #b388ff, #ff87d0, #7fffd4, #8ec5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 12px rgba(96,165,250,0.25));
+  animation: hue 8s linear infinite;
+}
+
+/* گلس‌مورفیسم عمومی */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 24px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* زیرخط انیمیشنی لینک */
+.link-underline {
+  position: relative;
+}
+.link-underline::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  left: 0; right: 0; bottom: -2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  background: linear-gradient(90deg, #22d3ee, #60a5fa, #fb37a3);
+  transition: transform .35s ease;
+}
+.link-underline:hover::after { 
+  transform: scaleX(1); 
+  transform-origin: left; 
+}
+
+/* اسکرول‌اسنپ */
+.snap-y-mandatory {
+  scroll-snap-type: y mandatory;
+}
+.section-snap {
+  scroll-snap-align: start;
+}
+
+/* کرسر سفارشی */
+body { cursor: none; }
+.cursor-dot, .cursor-ring {
+  position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference;
+}
+.cursor-dot { 
+  width: 6px; height: 6px; 
+  border-radius: 999px; 
+  background:#fff; 
+}
+.cursor-ring { 
+  width: 36px; height: 36px; 
+  border-radius: 999px; 
+  border:1px solid #fff; 
+  transition: transform .15s ease, opacity .25s; 
+  opacity:.5; 
+}
+
+/* انیمیشن‌ها */
+@keyframes hue { 
+  0% { filter: hue-rotate(0deg) } 
+  100% { filter: hue-rotate(360deg) } 
+}
+@keyframes cursor { 
+  0%,100% { opacity: 1 } 
+  50% { opacity: 0 } 
+}
+@keyframes sweep { 
+  0% { transform: translateX(-120%) } 
+  100% { transform: translateX(120%) } 
+}
+@keyframes glow { 
+  0%,100% { opacity: .7 } 
+  50% { opacity: 1 } 
+}
+@keyframes fade { 
+  from { opacity:0; transform: scale(.96) } 
+  to { opacity:1; transform: scale(1) } 
+}
